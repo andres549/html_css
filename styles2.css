@@ -1,0 +1,115 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  overflow: hidden; /* evita desbordes */
+}
+
+/* IMAGEN */
+.hero img {
+  width: 100%;
+  height: 500px; /* altura fija en desktop */
+  object-fit: cover; /* 🔥 evita que se deforme */
+}
+
+/* TEXTO ENCIMA */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* TEXTO */
+.hero-text h2 {
+  font-size: 3rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* BOTÓN */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+}
+
+/* CAPA OSCURA */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+/* 🔥 RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .hero img {
+    height: 400px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero img {
+    height: 300px;
+  }
+
+  .hero-text {
+    width: 90%; /* evita que el texto se salga */
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+}

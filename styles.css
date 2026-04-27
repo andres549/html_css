@@ -1,0 +1,142 @@
+/* RESET: limpia estilos del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex; /* organiza logo y menú */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+/* LOGO */
+.logo {
+    color: orange;
+}
+
+/* NAV */
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ================= HERO ================= */
+.hero img {
+    width: 100%; /* imagen ocupa todo el ancho */
+    height: auto;
+}
+
+/* ================= BODY ================= */
+.container {
+    display: flex; /* divide en columnas */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* LADO IZQUIERDO */
+.left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TARJETAS */
+.card {
+    background: #ddd;
+    padding: 15px;
+}
+
+/* REDES */
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+/* MAIN */
+.main {
+    flex: 1; /* ocupa espacio central */
+}
+
+.main h2 {
+    margin-bottom: 10px;
+}
+
+.main button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+
+/* IMAGEN DERECHA */
+.right {
+    width: 30%;
+}
+
+.right img {
+    width: 100%;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .container {
+        flex-direction: column; /* todo se pone vertical */
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
